@@ -3,6 +3,23 @@ document.getElementById("guitar").volume = 0.5;
 document.getElementById("fire").volume = 0.5;
 document.getElementById("guitar").play();
 document.getElementById("fire").play();
+// Function to play audio on user interaction
+function playAudio() {
+    let guitar = document.getElementById("guitar");
+    let fire = document.getElementById("fire");
+
+    guitar.volume = 0.5;
+    fire.volume = 0.5;
+
+    guitar.play().catch(error => console.log("Guitar audio blocked:", error));
+    fire.play().catch(error => console.log("Fire audio blocked:", error));
+
+    // Remove event listener after first interaction
+    document.removeEventListener("click", playAudio);
+}
+
+// Wait for a user interaction to start audio
+document.addEventListener("click", playAudio);
 
 // Show hover text effect when mouse moves
 function showHoverText(event) {
