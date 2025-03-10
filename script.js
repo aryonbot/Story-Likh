@@ -1,31 +1,26 @@
-// Set audio volume and play the background sounds
-document.getElementById("guitar").volume = 0.5;
-document.getElementById("fire").volume = 0.5;
-document.getElementById("guitar").play();
-document.getElementById("fire").play();
-// Function to play audio on user interaction
+// Function to play audio when user interacts
 function playAudio() {
     let guitar = document.getElementById("guitar");
     let fire = document.getElementById("fire");
 
-    guitar.volume = 0.5;
-    fire.volume = 0.5;
+    if (guitar && fire) {
+        guitar.volume = 0.5;
+        fire.volume = 0.5;
 
-    guitar.play().catch(error => console.log("Guitar audio blocked:", error));
-    fire.play().catch(error => console.log("Fire audio blocked:", error));
+        guitar.play().catch(error => console.log("Guitar audio blocked:", error));
+        fire.play().catch(error => console.log("Fire audio blocked:", error));
 
-    // Remove event listener after first interaction
-    document.removeEventListener("click", playAudio);
+        // Remove event listener after first interaction
+        document.removeEventListener("click", playAudio);
+    }
 }
 
-// Wait for a user interaction to start audio
-document.addEventListener("click", playAudio);
-
-// Show hover text effect when mouse moves
+// Function to show hover text on mouse movement
 function showHoverText(event) {
     let hoverText = document.getElementById("hover-text");
     let screenWidth = window.innerWidth;
     let cursorX = event.clientX;
+
     if (cursorX < screenWidth * 0.3) { 
         hoverText.className = "hover-text left-text";
         hoverText.style.opacity = 1;
@@ -37,21 +32,30 @@ function showHoverText(event) {
     }
 }
 
-// Hide hover text when mouse is over the navbar
+// Function to hide hover text
 function hideHoverText() {
-    document.getElementById("hover-text").style.opacity = 0;
+    let hoverText = document.getElementById("hover-text");
+    if (hoverText) {
+        hoverText.style.opacity = 0;
+    }
 }
 
-// Show floating C icon when clicking anywhere
+// Function to show floating icon on click
 function showIcon(event) {
     let icon = document.createElement("img");
     icon.src = "c.png";
     icon.classList.add("c-icon");
     document.body.appendChild(icon);
+
     icon.style.left = event.clientX + "px";
     icon.style.top = event.clientY + "px";
+
     setTimeout(() => {
         icon.style.animation = "floatUp 1s forwards";
         setTimeout(() => icon.remove(), 1000);
     }, 10);
 }
+
+// Wait for user interaction to play audio (Fix for autoplay block)
+document.addEventListener("click", playAudio);
+
