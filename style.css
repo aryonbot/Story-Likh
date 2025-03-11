@@ -9,7 +9,9 @@ body {
     text-align: center;
     position: relative;
     overflow: hidden;
-    background: black;
+    background: url('spirited_awaybr_disneyscreencaps.com_14367.webp') no-repeat center center fixed;
+    background-size: cover;
+    opacity: 1; /* Ensure full visibility */
 }
 /* Styling for the canvas background */
 #backgroundCanvas {
@@ -38,16 +40,16 @@ body {
     top: 50%;
     left: 0;
     transform: translateY(-50%);
-    background: rgba(255, 255, 255, 0.05); /* Transparency */
-    backdrop-filter: blur(15px);
-    -webkit-backdrop-filter: blur(15px);
+    background: rgba(255, 255, 255, 0.1); /* Transparency */
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
     padding: 15px 20px;
     display: flex;
     flex-direction: column; /* Ensure vertical alignment */
     justify-content: center;
     align-items: center;
     gap: 20px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
 }
 
 .navbar a {
