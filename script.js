@@ -63,3 +63,4 @@ window.onload = function () {
     document.body.onmousemove = showHoverText;
     document.body.onclick = showIcon;
 };
+
