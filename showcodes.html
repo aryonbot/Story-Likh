@@ -14,16 +14,85 @@
             <h2>1. The SQUAD SEARCH</h2>
             <div class="code-box">
                 <pre><code>
-#include &lt;stdio.h&gt;
+#include <stdio.h>
 
 int main() {
-    printf("Welcome to the Squad Search!\\n");
-    printf("Enter the number of squad members: ");
-    int n;
-    scanf("%d", &n);
-    printf("The Squad is ready!\\n");
+    int i, j, k, l;
+
+    // Outer loop
+    i = 1;
+    while (i <= 2) {
+        printf("\n>> Searching area %d\n", i);
+
+        if (i == 1) {
+            for (j = 1; j <= 5; j++) {
+                printf("  - Searching house %d\n", j); // Inner loop
+
+                if (j == 1) {
+                    printf("    ✅ Clear\n");
+                } else if (j == 2) {
+                    printf("    🚫 No enemy found\n");
+                } else if (j == 3) {
+                    printf("    ❗ Shit!! Backup! I lost one arm!\n");
+                } else if (j == 4) {
+                    printf("    ⚠️ House 4 under suspicion.\n");
+                    for (k = 0; k < 2; k++) {
+                        printf("      🔍 Inspecting door no. %d\n", k);
+                        if (k == 0) {
+                            printf("        ✅ Room clear, next door\n");
+                        } else if (k == 1) {
+                            printf("        ❗ Under suspicion\n");
+                            printf("        🔓 Door opened, two locked bathrooms inside\n");
+                            for (l = 0; l < 2; l++) {
+                                printf("          🚪 Checking bathroom %d\n", l);
+                                if (l == 0) {
+                                    printf("            ✅ Clear\n");
+                                } else if (l == 1) {
+                                    printf("            💥 Shoot! 2 targets killed\n");
+                                }
+                            }
+                        }
+                    }
+                } else if (j == 5) {
+                    printf("    ❗ Back off! RPG incoming!\n");
+                    printf("    💥💥 BOOOOOOOOOOMMMMM!!!!!\n");
+                }
+            }
+            i++;
+        } else if (i == 2) {
+            printf("  📢 All stand up, keep moving!\n");
+            for (j = 1; j <= 5; j++) {
+                printf("  - Searching other houses, house no. %d\n", j); // Inner loop
+
+                if (j == 1 || j == 2) {
+                    printf("    ✅ Clear\n");
+                } else if (j == 3) {
+                    printf("    ❗ Captain down! We have lost our captain!\n");
+                    printf("    👥 Ron and Nishel, pick him up! Keep moving!\n");
+                } else if (j == 4) {
+                    printf("    ✅ House 4 is clear.\n");
+                    printf("    🎯 Everybody, sniper ready!\n");
+                    printf("    👀 Look up, two towers spotted!\n");
+                    for (k = 0; k < 2; k++) {
+                        printf("      🔭 Inspecting tower no. %d\n", k);
+                        if (k == 0) {
+                            printf("        ✅ Clear\n");
+                        } else if (k == 1) {
+                            printf("        ❗ Target found! BAAAM!!\n");
+                            printf("        ✅ Target eliminated\n");
+                        }
+                    }
+                } else if (j == 5) {
+                    printf("    🏠 We have reached our base.\n");
+                    printf("    🎖️ Nice job, soldiers!\n");
+                }
+            }
+        }
+    }
+
     return 0;
 }
+
                 </code></pre>
             </div>
         </div>
