@@ -10,7 +10,7 @@ window.onload = function () {
     img.onload = function () {
         canvas.width = window.innerWidth;
         canvas.height = window.innerHeight;
-        ctx.globalAlpha = 0.9; // Lower opacity for background
+        ctx.globalAlpha = 1.0; // Lower opacity for background
         ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
         canvas.style.opacity = "1"; // Fade in effect
     };
