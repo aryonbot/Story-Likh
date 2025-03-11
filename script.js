@@ -12,6 +12,8 @@ window.onload = function () {
         canvas.height = window.innerHeight;
         ctx.globalAlpha = 1.0; // Lower opacity for background
         ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
+        ctx.drawImage(backgroundImage, 0, 0, canvas.width, canvas.height);
+        ctx.drawImage(backgroundImage, 0, 0, canvas.width, canvas.height);
         canvas.style.opacity = "1"; // Fade in effect
     };
     // ==== END: Added code for background image fade-in effect ====
