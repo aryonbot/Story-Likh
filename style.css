@@ -113,6 +113,30 @@ body {
     0% { transform: translateY(0); opacity: 1; }
     100% { transform: translateY(-100px); opacity: 0; }
 }
+.code-container {
+    max-width: 80%;
+    margin: auto;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.4); /* Dark semi-transparent box */
+    border-radius: 10px;
+    text-align: left;
+}
+
+.code-container h2 {
+    font-size: 24px;
+    color: white;
+    margin-bottom: 10px;
+}
+
+.code-box {
+    background: rgba(0, 0, 0, 0.6); /* Dark background for code */
+    color: #00ff00; /* Green text like old terminal */
+    padding: 15px;
+    border-radius: 8px;
+    font-family: "Courier New", monospace;
+    overflow-x: auto;
+    white-space: pre-wrap;
+}
 
 footer {
     background: #222;
