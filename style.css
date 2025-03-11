@@ -129,14 +129,17 @@ body {
 }
 
 .code-box {
-    background: rgba(0, 0, 0, 0.6); /* Dark background for code */
-    color: #00ff00; /* Green text like old terminal */
-    padding: 15px;
-    border-radius: 8px;
+    background: rgba(0, 0, 0, 0.8); /* Slightly darker for better contrast */
+    color: #00ff00; /* Neon green */
+    padding: 20px;
+    border-radius: 10px;
     font-family: "Courier New", monospace;
-    overflow-x: auto;
+    font-size: 18px; /* Larger font for readability */
+    line-height: 1.5;
     white-space: pre-wrap;
+    overflow-x: auto;
 }
+
 
 footer {
     background: #222;
