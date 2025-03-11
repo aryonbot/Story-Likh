@@ -8,14 +8,13 @@ window.onload = function () {
     img.src = "spirited_awaybr_disneyscreencaps.com_14367.webp"; // Update path if needed
 
     img.onload = function () {
-        canvas.width = window.innerWidth;
-        canvas.height = window.innerHeight;
-        ctx.globalAlpha = 1.0; // Lower opacity for background
-        ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
-        ctx.drawImage(backgroundImage, 0, 0, canvas.width, canvas.height);
-        ctx.drawImage(backgroundImage, 0, 0, canvas.width, canvas.height);
-        canvas.style.opacity = "1"; // Fade in effect
-    };
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+    ctx.globalAlpha = 1.0;
+    ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
+    canvas.style.opacity = "1";
+};
+
     // ==== END: Added code for background image fade-in effect ====
 
     // Set volume and play audio when user interacts
