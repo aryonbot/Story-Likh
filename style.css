@@ -37,19 +37,20 @@ body {
     position: fixed;
     top: 0;
     width: 100%;
-    background: rgba(255, 255, 255, 0.15); /* Semi-transparent white */
-    backdrop-filter: blur(10px); /* Adds glassmorphism effect */
-    -webkit-backdrop-filter: blur(10px); /* Safari support */
+    background: rgba(255, 255, 255, 0.05); /* More transparency */
+    backdrop-filter: blur(15px); /* Stronger blur effect */
+    -webkit-backdrop-filter: blur(15px); /* Safari support */
     padding: 15px 20px;
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 20px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Soft shadow effect */
+    border-radius: 0px; /* Optional: Makes it smoother */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* More prominent shadow */
 }
 
 .navbar a {
-    color: white; /* Keeps text visible */
+    color: rgba(255, 255, 255, 0.8); /* Keeps text readable */
     text-decoration: none;
     font-size: 18px;
     font-weight: bold;
@@ -58,9 +59,10 @@ body {
 }
 
 .navbar a:hover {
-    background: rgba(255, 255, 255, 0.3); /* Light hover effect */
+    background: rgba(255, 255, 255, 0.1); /* Light hover effect */
     border-radius: 5px;
 }
+
 
 
 .content {
